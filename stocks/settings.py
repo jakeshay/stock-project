@@ -25,7 +25,7 @@ SECRET_KEY = 'ez3wom*wo9kxxn7t#%(i*332hjp61=zehhgi*upx97&e#o3(0u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jakeshay.pythonanywhere.com']
 
 
 # Application definition
@@ -76,12 +76,11 @@ WSGI_APPLICATION = 'stocks.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hbsxbcwx',
-        'HOST': 'otto.db.elephantsql.com',
-        'USER': 'hbsxbcwx',
-        'PASSWORD': 'hTV3oVVmtlCvsezHqBmFUifoXMyRXt-2',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'jakeshay$stock_db',
+        'HOST': 'jakeshay.mysql.pythonanywhere-services.com',
+        'USER': 'jakeshay',
+        'PASSWORD': 'Bandito4137!',
     }
 }
 
@@ -123,6 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/jakeshay/stock-project/static'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-SESSION_INACTIVITY_TIMEOUT_IN_SECONDS = 10
